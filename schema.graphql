@@ -20,7 +20,7 @@ type Account @entity {
   id: ID!
   totalRSVPs: BigInt!
   totalAttendedEvents: BigInt!
-  rsvps: [PRSVP!] @derivedFrom(field: "attendee")
+  rsvps: [RSVP!] @derivedFrom(field: "attendee")
   attendedEvents: [Confirmation!] @derivedFrom(field: "attendee")
 }
 
